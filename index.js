@@ -18,7 +18,7 @@ app.use(expressSession({
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-const PORT = 4000;
+const PORT = 3000;
 
 app.listen(PORT, () => {
   console.log("App listening on port ", PORT);
@@ -50,7 +50,8 @@ app.get("/terms", (req, res) => {
 });
 
 app.get("/slides", (req, res) => {
-  res.sendFile(path.resolve(__dirname + "/views/", "slide-show.html"));
+  //res.sendFile(path.resolve(__dirname + "/views/", "slide-show.html"));
+  res.render("slides");
 });
 
 app.post("/update-profile" , (req, res)=>{
