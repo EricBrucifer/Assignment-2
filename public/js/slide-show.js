@@ -19,7 +19,7 @@ const swapImage = ()=>{
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const links= document.querySelectorAll("a");
+    const links= document.querySelectorAll(".fotisimos");
 
     let image;
 
@@ -33,5 +33,36 @@ document.addEventListener("DOMContentLoaded", () => {
         imageCache.push(image);
     }
 
-    setInterval(swapImage, 2000);
+    setInterval(swapImage, 4000);
+
+    $(".previous").addEventListener("click", previous);
+    $(".next").addEventListener("click", next);
 });
+
+function previous(){
+
+    if (imageCounter <= 0){
+        imageCounter = imageCache.length;
+    }
+    imageCounter = (imageCounter -1) % imageCache.length;
+
+    mainImage.src = imageCache[imageCounter].src;
+    mainImage.alt = imageCache[imageCounter].alt;
+
+    caption.textContent = imageCache[imageCounter].alt;
+    
+} 
+
+function next(){
+
+    
+    imageCounter = (imageCounter +1) % imageCache.length;
+
+    mainImage.src = imageCache[imageCounter].src;
+    mainImage.alt = imageCache[imageCounter].alt;
+
+    caption.textContent = imageCache[imageCounter].alt;
+    
+} 
+
+  

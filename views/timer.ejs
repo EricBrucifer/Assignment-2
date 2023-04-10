@@ -1,0 +1,24 @@
+<!-- views/timer.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Countdown Timer</title>
+  </head>
+  <body>
+    <h1>Countdown Timer</h1>
+    <p>Time left: <span id="timer"><%- timeLeft %></span></p>
+    <script>
+      setInterval(() => {
+        const timerElem = document.getElementById('timer');
+        let timeLeft = parseInt(timerElem.innerHTML);
+        timeLeft--;
+        if (timeLeft <= 0) {
+          clearInterval(timerId);
+          timerElem.innerHTML = 'Timer finished!';
+        } else {
+          timerElem.innerHTML = timeLeft;
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>

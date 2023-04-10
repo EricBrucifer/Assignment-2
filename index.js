@@ -18,7 +18,7 @@ app.use(expressSession({
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-const PORT = 3000;
+const PORT = 4000;
 
 app.listen(PORT, () => {
   console.log("App listening on port ", PORT);
@@ -46,13 +46,18 @@ app.get("/faq", (req, res) => {
 });
 
 app.get("/terms", (req, res) => {
-  res.sendFile(path.resolve(__dirname + "/views/", "terms.html"));
+  //res.sendFile(path.resolve(__dirname + "/views/", "terms.html"));
+  res.render("terms")
 });
 
-app.get("/slides", (req, res) => {
+app.get("/slide-show", (req, res) => {
   //res.sendFile(path.resolve(__dirname + "/views/", "slide-show.html"));
-  res.render("slides");
+  res.render("slide-show");
 });
+
+app.get('/timer', (req, res) => {
+  res.render("timer");
+})
 
 app.post("/update-profile" , (req, res)=>{
 console.log(req.bofy);

@@ -1,27 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+<head lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fishing Slide Show</title>
+    <title>Funny Animal Slide Show</title>
     <link rel="stylesheet" href="css/project.css">
 </head>
 <body>
     <%- include('layouts/menu') -%>
     <main>
-        <h1>Fishing Slide Show</h1>
-
+        <h1>Funny Animal Slide Show</h1>
+        <div class="slideshow-container">
         <ul id="image_list">
-            <li><a href="images/ala.png" title="Catch and Release"></a></li>
-            <li><a href="images/mars.png" title="Marsh at Play"></a></li>
-            <li><a href="images/shroom.png" title="The Big One!"></a></li>
-            <li><a href="images/wurm.png" title="Roaming Worm"></a></li>
+            <li><a class="fotisimos" href="images/Lizard.jpg" 
+                title="Lizard"></a></li>
+            <li><a class="fotisimos" href="images/Chicken.jpg" 
+                title="Chicken"></a></li>
+            <li><a class="fotisimos" href="images/Pig.jpg" 
+                title="Pig"></a></li>
+            <li><a class="fotisimos" href="images/Sheep.png" 
+                title="Sheep"></a></li>
+            <li><a class="fotisimos" href="images/Monkey.jpg" 
+                title="Monkey"></a></li>
         </ul>
     
-        <p><img id="main_image" src="images/ala.png" alt="Catch and Release"></p>
-        <h2 id="caption">Catch and Release</h2>    
-
-        <script src="js/slides.js"></script>
+        <p><img id="main_image" src="images/Monkey.jpg" alt="Monkey"></p>
+        <h2 id="caption">Monkey</h2>   
+    
+        <button class="previous">Previous</button>
+        <button class="next">Next</button>
+    </div>
+        <script src="js/slide-show.js"></script>
+        <%- include('layouts/footer') -%>
     </main>  
 </body>
 </html>

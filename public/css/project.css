@@ -1,39 +1,52 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
-    margin: 0 auto;
-    width: 700px;
-    border: 3px solid purple;
-    padding: 0 2em 1em;
+    background-image: linear-gradient(blue,red,purple);
+    margin: auto;
+    width: 1000px;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction:column;
+    
+    padding: 0 14em 17em;
 }
 h1 {
-    color: cornflowerblue;
+    color: rgb(1, 7, 18);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
 }
 div {
     margin-bottom: .5em;
 }
 label {
     display: inline-block;
-    width: 11em;
+    width: 15em;
     text-align: right;
 }
 input {
-    margin-left: 1em;
+    margin-left: 0.5em;
     margin-right: 0.5em;
 }
 
 span {
-    color:black;
+    color:rgb(35, 33, 33);
     font-size: 12px;
 
 }
 
+.previous, .next {
+  background-color: blue;
+  color: aqua;
+  border: 10px;
+}
+
 #main_image{
-    max-width: 200px;
+    max-width: 500px;
+   height: 300px;
 }
 
 .error-span {
-    color: red;
+    color: rgb(255, 251, 0);
 }
 
 .current-setting{
@@ -41,13 +54,48 @@ span {
 }
 
 label {
-    font-size: 12px;
+    font-size: 15px;
+}
+.slideshow-container {
+  position: relative;
+  height: 400px;
+}
+#image_list {
+  display: none;
+  height: 400px;
+}
+
+.previous, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+h3 {
+  text-align: center;
 }
 
 select {
     margin-left: 1em;
     margin-right: 0.5em;
-    width: 11em;
+    width: 12em;
 }
 
 button {
@@ -57,7 +105,7 @@ button {
 
 
 h2 {
-    color: cornflowerblue;
+    color: rgb(7, 10, 16);
     text-align: center;
 }
 
@@ -69,31 +117,147 @@ p {
     display: none;
 }
 
+.footer {
+  background-color: #eb1010;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  
+  
+}
+
+
+.footer-ul {
+    margin-top: auto;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #fb1010;
+    
+    
+}
+
+.footer-li {
+    list-style: none;
+    float: left;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.footer-li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 52px;
+    text-decoration: none;
+}
+.footer-li a:hover {
+  background-color: rgb(0, 0, 0);
+}
+
 .menu-ul {
+    bottom: 0;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #fb1010;
 }
   
   .menu-li {
     float: left;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
   }
   
   .menu-li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 140px;
     text-decoration: none;
   }
-  
-  /* Change the link color to #111 (black) on hover */
+
   .menu-li a:hover {
-    background-color: cornflowerblue;
+    background-color: rgb(0, 0, 0);
   }
 
   .hidden{
     display: none;
   }
+
+  #division_1{
+    padding: 10px;
+    margin-top: 10px;
+    border-color: blueviolet;
+  }
+
+  #division_2{
+    padding: 10px;
+    margin-top: 10px;
+    border-color: blueviolet;
+  }
+
+  #modulo_1{
+    padding: 10px;
+    margin-top: 10px;
+    border-color: blueviolet;
+  }
+
+  #modulo_2{
+    padding: 10px;
+    margin-top: 10px;
+    border-color: blueviolet;
+  }
+
+  #modulo_btn{
+    padding: 10px;
+    border-color: blueviolet;
+    font-weight: bolder;
+  }
+
+  #division_btn{
+    padding: 10px;
+    border-color: blueviolet;
+    font-weight: bolder;
+  }
+
+  #for_limit{
+    padding: 10px;
+    border-color: blueviolet;
+    margin-top: 10px;
+  }
+  
+  #for_counter{
+    padding: 10px;
+    border-color: blueviolet;
+    margin-top: 10px;
+  }
+
+  #for_increment{
+    padding: 10px;
+    border-color: blueviolet;
+    margin-top: 10px;
+  }
+
+  #for_increment_direction{
+    padding: 5px;
+    border-color: blueviolet;
+    margin-top: 10px;
+  }
+
+  #for_loop_btn{
+    padding: 10px;
+    border-color: blueviolet;
+    font-weight: bolder;
+   
+  }
+
+  
+
+  
+  

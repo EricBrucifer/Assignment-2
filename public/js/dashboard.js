@@ -77,3 +77,5 @@ document.addEventListener("DOMContentLoaded", () => {
   
   $("#update_settings").addEventListener("click", onSubmit);
 });
+
+
